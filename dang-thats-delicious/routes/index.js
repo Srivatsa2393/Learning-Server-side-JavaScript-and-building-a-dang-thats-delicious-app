@@ -60,6 +60,7 @@ router.post('/account/reset/:token',
 );
 
 router.get('/map', storeController.mapPage);
+router.get('/hearts', authController.isLoggedIn, catchErrors(storeController.getHearts));
 
 
 // router.get('/reverse/:name', (req,res) => {
